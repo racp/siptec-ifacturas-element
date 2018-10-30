@@ -1,0 +1,75 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../vaadin-dialog/vaadin-dialog.html">
+<link rel="import" href="../vaadin-date-picker/vaadin-date-picker.html">
+<link rel="import" href="../vaadin-combo-box/vaadin-combo-box.html">
+<link rel="import" href="../vaadin-ordered-layout/vaadin-vertical-layout.html">
+<link rel="import" href="../vaadin-ordered-layout/vaadin-horizontal-layout.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-dropdown-input/paper-dropdown-input.html">
+<link rel="import" href="../vaadin-button/vaadin-button.html">
+
+<dom-module id="siptec-ifacturas-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+      <vaadin-dialog opened>
+        <template>
+          <vaadin-date-picker label="Fecha Factura"></vaadin-date-picker>
+          <vaadin-horizontal-layout theme="spacing">
+            <vaadin-vertical-layout with="50%">
+              <paper-dropdown-input label="Cliente"></paper-dropdown-input>
+              <paper-input label="Contacto"></paper-input>
+              <paper-input label="Dirección"></paper-input>
+              <paper-input label="Ciudad"></paper-input>
+              <paper-input label="País"></paper-input>
+              <paper-input label="Vendedor"></paper-input>
+              <paper-input label="RNC"></paper-input>
+              <paper-input label="Fecha de Venc"></paper-input>
+            </vaadin-vertical-layout>
+            <vaadin-vertical-layout>
+              <paper-dropdown-input label="Tipo de Factura"></paper-dropdown-input>
+              <paper-input label="# de Factura"></paper-input>
+              <paper-input label="Comprobante"></paper-input>
+              <paper-input label="Ref. de Cotización"></paper-input>
+            </vaadin-vertical-layout>
+            
+          </vaadin-horizontal-layout>
+  
+          <vaadin-horizontal-layout theme="spacing">
+            <vaadin-text-field label="Subtotal" readonly></vaadin-text-field>
+            <vaadin-text-field label="Impuesto" readonly></vaadin-text-field>
+            <vaadin-text-field label="Total" readonly></vaadin-text-field>
+            <vaadin-button label="Guardar" theme="primary">Guardar</vaadin-button>
+            <vaadin-button label="Salir" theme="error">Salir</vaadin-button>
+          </vaadin-horizontal-layout>
+        </template>
+      </vaadin-dialog>
+  </template>
+
+  <script>
+    /**
+     * `siptec-ifacturas-element`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class SiptecIfacturasElement extends Polymer.Element {
+      static get is() { return 'siptec-ifacturas-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'siptec-ifacturas-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SiptecIfacturasElement.is, SiptecIfacturasElement);
+  </script>
+</dom-module>

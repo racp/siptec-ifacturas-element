@@ -1,0 +1,26 @@
+{
+  "name": "siptec-ifacturas-element",
+  "main": "siptec-ifacturas-element.html",
+  "authors": [
+    "Siptec S de RL"
+  ],
+  "version": "Apache-20",
+  "ignore": "bower_components",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "vaadin-combo-box": "vaadin/vaadin-combo-box#^4.1.0",
+    "vaadin-ordered-layout": "vaadin/vaadin-ordered-layout#^1.1.0",
+    "paper-input": "PolymerElements/paper-input#2.0-preview",
+    "paper-dropdown-input": "Juravenator/paper-dropdown-input#2.5.2",
+    "vaadin-button": "vaadin/vaadin-button#^2.1.0",
+    "vaadin-dialog": "vaadin/vaadin-dialog#^2.2.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  }
+}
